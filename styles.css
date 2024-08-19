@@ -1,0 +1,352 @@
+body {
+    margin: 0;
+    
+    background-color: rgb(244, 217, 208);
+}
+
+/* Header styles */
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+
+} 
+.header {
+    background-color: rgb(146, 26, 64) ; /* Light pink */
+    color: rgb(217, 171, 171);
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
+
+.menu-icon {
+    background: none;
+    border: none; 
+    font-size: 24px;
+    color: rgb(217, 171, 171);
+    cursor: pointer;
+    position: relative;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -350px; /* Initially hidden */
+    width: 250px;
+    height: 100vh;
+    background-color: rgb(217, 171, 171);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.sidebar.active {
+    left: 0; /* Show the sidebar */
+}
+
+.sidebar-close {
+    font-size: 24px;
+    color: rgb(146, 26, 64);
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar a:hover {
+    background-color: rgb(244, 217, 208);
+}
+
+/*снимки*/
+
+
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            max-height: 500px;
+            margin: 80px auto 20px;
+            text-align: center;
+           
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            padding: 0;
+            display: flex;
+           
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+            height:auto;
+            display: block;
+            align-items: center;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev:hover, .next:hover {
+            background: rgba(0,0,0,0.8);
+        }
+
+        .more-about{
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, 'Arial Narrow', Arial, sans-serif;
+            color: rgb(199, 91, 122);
+        }
+    /* BUY*/
+        .magazine-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin:80px auto 20px;
+        
+        }
+        
+        .product-card {
+            
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(25% - 40px); /* Width adjusted with margin */
+            text-align: center;
+            background-color: rgb(217, 171, 171);
+            box-sizing: border-box; /* Ensures padding and border are included in width */
+            
+        }
+
+        .product-card img, .product-card2 img {
+            max-width: 100%;
+            height: auto; /* Maintain aspect ratio */}
+        
+        .product-card img {
+            width: 200px;
+            border-radius: 8px;
+            height: 300px;
+            align-items: center;
+        }
+        
+        .product-card2 {
+            
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(25% - 40px); /* Width adjusted with margin */
+            text-align: center;
+            background-color:rgb(217, 171, 171);
+        }
+        .product-card2 img{
+            max-width: 100%;
+            border-radius: 8px;
+            height: 300px;
+            align-items: center;
+        }
+        .description {
+            margin: 10px 0;
+            color:#56647b;
+            text-align: center;
+            font-family: "Caveat" , Arial, Helvetica, sans-serif;
+            font-size: 25px;
+        }
+        
+        .buy-button {
+            /*background-color:  #ea90e7;
+            color: #56647b;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            align-items: center;
+            letter-spacing: 2px;
+            font-family: "Caveat" , Arial, Helvetica, sans-serif;
+            font-size: 30px;*/
+            background-color: rgb(146, 26, 64);
+    color: rgb(244, 217, 208);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing: 2px;
+    font-family: "Caveat", Arial, Helvetica, sans-serif;
+    font-size: 20px; /* Adjust font size for better fit */
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+            
+        
+        } 
+        
+        .buy-button:hover {
+            background-color: rgb(217, 171, 171);
+        }
+
+            @media (max-width: 1200px) {
+                .product-card, .product-card2 {
+                    width: calc(33.33% - 40px); /* 3 колони на екрани с ширина под 1200px */
+                }
+            }
+            
+            @media (max-width: 900px) {
+                .product-card, .product-card2 {
+                    width: calc(50% - 40px); /* 2 колони на екрани с ширина под 900px */
+                }
+            }
+            
+            @media (max-width: 600px) {
+                .product-card, .product-card2 {
+                    width: calc(100% - 40px); /* 1 колона на екрани с ширина под 600px */
+                    display: flex;
+                    flex-direction: column; /* Подрежда елементите вертикално */
+                    align-items: center; /* Центрира съдържанието хоризонтално */
+                }
+            }
+        /* VIDEO*/
+
+        .video-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%; /* Можете да настроите ширината според нуждите си */
+            max-width: 800px; /* Максимална ширина на видеото */
+            margin:80px auto 20px;
+        }
+        
+        video {
+            width: 100%;
+            height: auto; /* Поддържа пропорциите на видеото */
+            
+        }
+        
+        .overlay-text {
+            position: absolute;
+            top: 50%; /* Центрира текста по вертикала */
+            left: 50%; /* Центрира текста по хоризонтала */
+            transform: translate(-50%, -50%); /* Центрира текста чрез трансформиране */
+            color: white; /* Цвят на текста */
+            background-color: rgba(211, 132, 187, 0.5); /* Полупрозрачен фон за текста */
+            padding: 10px; /* Отстояние около текста */
+            border-radius: 5px; /* Закръглени ъгли на фона */
+            font-size: 1.5rem; /* Размер на шрифта */
+            text-align: center; /* Центрира текста */
+            width: 80%; /* Ширина на текстовия блок */
+        }
+
+    /*STICKY*/
+
+    .scroll-to-top {
+        position: fixed;
+        bottom: 20px; /* Отстояние от долния ръб */
+        right: 20px; /* Отстояние от десния ръб */
+        background-color: rgba(0, 0, 0, 0.5); /* Прозрачен фон */
+        color: #fff; /* Цвят на иконката */
+        border-radius: 50%; /* Окръжна форма */
+        width: 50px; /* Ширина на иконката */
+        height: 50px; /* Височина на иконката */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px; /* Размер на иконката */
+        text-decoration: none; /* Премахва подчертаването на връзката */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Сенчест ефект */
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Плавни преходи */
+    }
+    
+    .scroll-to-top:hover {
+        background-color: rgba(0, 0, 0, 0.8); /* По-тъмен фон при задържане на мишката */
+        transform: scale(1.1); /* Увеличава размера на иконката при задържане */
+    }
+
+    /*footer*/
+
+    #reserve{
+        /*padding: 70px 64px;*/
+        background-color:rgb(146, 26, 64) ;
+    }
+    
+    #reserve .reserve-h1 {
+        text-align: center;
+        font-size: 30px;
+        color:rgb(244, 217, 208);
+    
+    }
+    
+    #reserve .reserve-text{
+        text-align: center;
+        color:rgb(244, 217, 208);
+        
+    }
+    .mobile{
+        color: rgb(244, 217, 208);
+        border: 1px solid #fff;
+        border-radius: 3px;
+        font-size: 20px;
+    }
+    
+    .social-text{
+        text-align: center;
+        font-size: 17px;
+        /*display: flex;
+        gap: 10px;*/
+        color:rgb(244, 217, 208);
+      
+    }
+    .social{
+        text-align: center;
+        font-size: 20px;
+        /*display: flex;
+        gap: 10px;*/
+        color:rgb(244, 217, 208);
+        border: 1px solid #fff;;
+       
+
+    }
+    .social a{
+        text-decoration: none;
+        
+        
+    }
+   
+ 
+   
